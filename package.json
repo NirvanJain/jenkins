@@ -10,10 +10,10 @@
   },
   "private": true,
   "scripts": {
-    "dev": "webpack --config webpack.config.js",
+    "dev": "node init && webpack --config webpack.config.js",
     "prod": "webpack --config webpack.config.js --mode=production",
-    "build": "yarn prod",
-    "start": "yarn dev --watch",
+    "build": "node init && yarn prod",
+    "start": "node init && yarn dev --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint:js": "eslint . && prettier --check .",
